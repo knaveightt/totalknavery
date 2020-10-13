@@ -1,0 +1,11 @@
+- date: October 12th, 2020
+  changes:
+    - entry: Sample Change 1
+    - entry: Sample Change 2
+    - entry: Sample Change 3
+
+- date: October 13th, 2020
+  changes:
+    - entry: Sample Change Uno
+    - entry: Sample Change Dos
+    - entry: Sample Change Tres
