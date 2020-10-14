@@ -2271,6 +2271,10 @@
 			display: none;
 		}
 
+        .icon.bright {
+            color: #ddd;
+        }
+
 /* Image */
 
 	.image {
@@ -2505,6 +2509,24 @@
 		dl dd {
 			margin-left: 2em;
 		}
+
+
+        
+		ul.footer-links {
+			cursor: default;
+			list-style: none;
+            margin-left: 6em;
+			padding-left: 0;
+		}
+
+			ul.footer-links li {
+				padding: 0 1em 0 0;
+                text-align: left;
+			}
+
+            ul.footer-links a {
+                color: #ddd;
+            }
 
 /* Table */
 
@@ -3190,7 +3212,7 @@
 /* Footer */
 
 	#footer {
-		padding: 6em 0;
+		padding: 2em 0;
 		background: #661000;
 		color: #fff;
 		text-align: center;
