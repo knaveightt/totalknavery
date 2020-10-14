@@ -1,11 +1,12 @@
-- date: October 12th, 2020
-  changes:
-    - entry: Sample Change 1
-    - entry: Sample Change 2
-    - entry: Sample Change 3
+# Example Entry
+# - date: October 12th, 2020
+#   changes:
+#     - entry: Sample Change 1
+#     - entry: Sample Change 2
+#     - entry: Sample Change 3
 
 - date: October 13th, 2020
   changes:
-    - entry: Sample Change Uno
-    - entry: Sample Change Dos
-    - entry: Sample Change Tres
+    - entry: First Entry!
+    - entry: Created News Page!
+    - entry: Updated Footer links!
