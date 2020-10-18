@@ -7,7 +7,7 @@ properties:
     category: Game Music
 
 asset:
-    artwork: assets/images/albums/default.jpg
+    artwork: assets/images/albums/bod7.jpg
     filepath: assets/music/overworld_wilderness.mp3
 
 featured:
