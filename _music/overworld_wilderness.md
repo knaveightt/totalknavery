@@ -3,7 +3,7 @@ properties:
     title: Overworld Wilderness
     artist: John Osinski
     album: N/A
-    length: 0:00
+    length: 2:33
     category: Game Music
 
 asset:

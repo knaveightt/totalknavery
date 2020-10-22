@@ -3,11 +3,11 @@ properties:
     title: Town Tree
     artist: John Osinski
     album: N/A
-    length: 0:00
+    length: 2:03
     category: Game Music
 
 asset:
-    artwork: assets/images/albums/default.jpg
+    artwork: assets/images/albums/default.png
     filepath: assets/music/town_tree.mp3
 
 featured:
