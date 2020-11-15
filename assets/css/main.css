@@ -2219,6 +2219,7 @@
 		border: solid 1px #dbdbdb;
 		margin-bottom: 2em;
 		padding: 1.5em;
+        min-height: 16em;
 	}
 
 		.box > :last-child,
@@ -2306,6 +2307,12 @@
 			padding: 0 1.5em 1em 0;
 			top: 0.25em;
 		}
+
+        .image.leftbox {
+            float: left;
+            margin-bottom: 3em;
+            padding: 0 1.5em 2em 0;
+        }
 
 		.image.right {
 			float: right;
