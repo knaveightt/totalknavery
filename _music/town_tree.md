@@ -14,5 +14,5 @@ featured:
     subject: N/A
     link: N/A
 ---
-Default text describing the game music track for Town Tree.
+This track was created to be used for an RPG-style town or town hall music, with a calm fantasy-esque melody and steady tempo.
 
