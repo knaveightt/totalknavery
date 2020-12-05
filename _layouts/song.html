@@ -4,7 +4,7 @@ title: TotalKnavery Music
 description: Audio for all sorts of occasions! 
 ---
 <!-- Include/initialize audiojs file for music player -->
-<script src="/assets/js/audio.min.js"></script>
+<script src="{{ 'assets/js/audio.min.js' | relative_url }}"></script>
 <script>
   audiojs.events.ready(function() {
       var as = audiojs.createAll();
@@ -16,8 +16,8 @@ description: Audio for all sorts of occasions!
 <div class="row">
   <section class="6u 12u$(medium)">
     <h2>Listen to the track!</h2>
-    <audio src="{{ page.filepath }}" preload="auto"></audio>
-    <p><div class ="image leftbox"><img src="{{ page.artwork }}" alt="Album Image" /></div>
+    <audio src="{{ page.filepath | relative_url }}" preload="auto"></audio>
+    <p><div class ="image leftbox"><img src="{{ page.artwork | relative_url }}" alt="Album Image" /></div>
       {{ content }}</p>
   </section>
 
