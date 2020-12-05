@@ -50,7 +50,7 @@ description: Audio for all sorts of occasions!
 <div class="box">
   <div class ="image leftbox"><img src="{{ song.artwork }}" alt="Album Image" /></div>
   <div id="musiclinks">
-    <a href="#" class="button icon fa-play-circle">Play It!</a>
+    <a href="{{ song.url }}" class="button icon fa-play-circle">Play It!</a>
     {% if song.featured-in != 'N/A' %}<a href="{{ song.link }}" class="button icon fa-link">Featured</a>{% endif %}
   </div>
   <h4><span class="highlight">{{ song.title }}</span><br/>
