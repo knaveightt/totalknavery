@@ -1,7 +1,7 @@
 <!-- Header -->
 <header id="header">
 	<div class="inner">
-		<a href="{{ 'index.html' | relative_link }}" class="logo">Welcome to <strong>TotalKnavery!</strong></a>
+		<a href="{{ '/index.html' | relative_link }}" class="logo">Welcome to <strong>TotalKnavery!</strong></a>
 		<nav id="nav">
           {% for item in site.data.navigation %}
             <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
