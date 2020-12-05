@@ -3,5 +3,28 @@ layout: page
 title: TotalKnavery Music
 description: Audio for all sorts of occasions! 
 ---
+<!-- Intro -->
 
-{{ content }}
+<div class="row">
+  <section class="6u 12u$(medium)">
+    <h2>Listen to the track!</h2>
+    <p>(javascript goes here)</p>
+    <p><div class ="image leftbox"><img src="{{ page.artwork }}" alt="Album Image" /></div>
+      {{ content }}</p>
+  </section>
+
+  <section class="3u 6u(medium) 12u$(small)">
+    <h3>Track Info:</h3>
+    <ul>
+      <li>Artist: {{ page.artist }}</li>
+      <li>Album: {{ page.album }}</li>
+      <li>Length: {{ page.length }}</li>
+      <li>Category: {{ page.category }}</li>
+    </ul>
+  </section>
+
+  <section class="3u$ 6u$(medium) 12u$(small)">
+    <h3>Notice</h3>
+    <p>Unless otherwise stated, all music is provided for preview on this site only and is explicitly owned by TotalKnavery (John Osinski) or the respective copyright/license owners. All rights reserved.</p>
+  </section>
+</div>

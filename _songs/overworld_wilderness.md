@@ -5,8 +5,8 @@ album: N/A
 length: "2:33"
 category: Game Music
 
-artwork: assets/images/albums/bod7.jpg
-filepath: assets/music/overworld_wilderness.mp3
+artwork: /assets/images/albums/bod7.jpg
+filepath: /assets/music/overworld_wilderness.mp3
 
 featured-in: Breath of Death VII
 link: https://store.steampowered.com/app/107300/Breath_of_Death_VII/

@@ -5,8 +5,8 @@ album: N/A
 length: "2:03"
 category: Game Music
 
-artwork: assets/images/albums/default.png
-filepath: assets/music/town_tree.mp3
+artwork: /assets/images/albums/default.png
+filepath: /assets/music/town_tree.mp3
 
 featured-in: N/A
 link: N/A
