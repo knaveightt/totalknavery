@@ -4,6 +4,10 @@
 #     - entry: Sample Change 1
 #     - entry: Sample Change 2
 #     - entry: Sample Change 3
+- date: December 5th, 2020
+  changes:
+    - entry: Created Music Page!
+    - entry: Play tracks featured on the site!
 
 - date: October 13th, 2020
   changes:
