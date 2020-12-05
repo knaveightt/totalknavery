@@ -48,9 +48,9 @@ description: Audio for all sorts of occasions!
 
 {% for song in site.songs %}
 <div class="box">
-  <div class ="image leftbox"><img src="{{ song.artwork }}" alt="Album Image" /></div>
+  <div class ="image leftbox"><img src="{{ song.artwork | relative_url }}" alt="Album Image" /></div>
   <div id="musiclinks">
-    <a href="{{ song.url }}" class="button icon fa-play-circle">Play It!</a>
+    <a href="{{ song.url | relative_url }}" class="button icon fa-play-circle">Play It!</a>
     {% if song.featured-in != 'N/A' %}<a href="{{ song.link }}" class="button icon fa-link">Featured</a>{% endif %}
   </div>
   <h4><span class="highlight">{{ song.title }}</span><br/>
