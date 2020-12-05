@@ -1,3 +1,5 @@
+baseurl: "https://knaveightt.github.io/totalknavery"
+
 collections:
     songs:
       output: true
