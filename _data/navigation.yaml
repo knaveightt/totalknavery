@@ -1,6 +1,6 @@
 - name: Programming
-  link: index.html
+  link: /index.html
 - name: Music
-  link: music.html
+  link: /music.html
 - name: Blog
-  link: index.html
+  link: /index.html
