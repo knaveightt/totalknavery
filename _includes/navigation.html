@@ -1,10 +1,10 @@
 <!-- Header -->
 <header id="header">
 	<div class="inner">
-		<a href="index.html" class="logo">Welcome to <strong>TotalKnavery!</strong></a>
+		<a href="{{ '/index.html' | relative_url }}" class="logo">Welcome to <strong>TotalKnavery!</strong></a>
 		<nav id="nav">
           {% for item in site.data.navigation %}
-            <a href="{{ item.link }}">{{ item.name }}</a>
+            <a href="{{ item.link | relative_url }}">{{ item.name }}</a>
           {% endfor %}
 		</nav>
 		<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>

@@ -1771,6 +1771,15 @@
         padding-left: 40px;
     }
 
+    .highlight {
+        color:#fff;
+    }
+
+    .subtext {
+        color: #6a3030;
+        font-size: 0.6em;
+    }
+
 		@media screen and (max-width: 1280px) {
 
 			.inner {
@@ -2646,6 +2655,10 @@
 		color: #fff;
 	}
 
+    #musiclinks .button {
+        float:right;
+    }
+    
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,

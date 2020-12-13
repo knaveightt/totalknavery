@@ -15,9 +15,8 @@ description: Audio for all sorts of occasions!
     <h3>Music Links:</h3>
     <p>Check out my music profile at the sites below.</p>
     <ul>
-      <li>Link Number One</li>
-      <li>Link Number Two</li>
-      <li>Link Number Three</li>
+      <li>IndieMusic Profile Coming Soon!</li>
+      <li>SoundCloud Profile Coming Soon!</li>
     </ul>
   </section>
 
@@ -32,11 +31,31 @@ description: Audio for all sorts of occasions!
 <!-- Content -->
 <h2 id="content">Featured Music</h2>
 
+<!-- [Template for song entries] 
 <div class="box">
   <div class="image leftbox"><img src="assets/images/albums/default.png" alt="Album Image" /></div>
-  <h4>Song Title Here<br/>
-  <span>Category Here | Length: X:XX | Featured In "Bla Bla Bla Bla"</span></h4>
+  <div id="musiclinks">
+    <a href="#" class="button icon fa-play-circle">Play It!</a>
+    <a href="#" class="button icon fa-link">Featured</a>
+  </div>
+  <h4><span class="highlight">Song Title Here</span><br/>
+  <span class="subtext">Category Here | Length: X:XX | Featured In "Bla Bla Bla Bla"</span></h4>
   <p>
     Felis sagittis eget tempus primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Magna sed etiam ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus lorem ipsum dolor sit amet nullam.
   </p>
 </div>
+-->
+
+{% for song in site.songs %}
+<div class="box">
+  <div class ="image leftbox"><img src="{{ song.artwork | relative_url }}" alt="Album Image" /></div>
+  <div id="musiclinks">
+    <a href="{{ song.url | relative_url }}" class="button icon fa-play-circle">Play It!</a>
+    {% if song.featured-in != 'N/A' %}<a href="{{ song.link }}" class="button icon fa-link">Featured</a>{% endif %}
+  </div>
+  <h4><span class="highlight">{{ song.title }}</span><br/>
+  <span class="subtext">{{ song.category }} | Length: {{ song.length }} {% if song.featured-in != 'N/A' %}| Featured In: {{ song.featured-in }} {% endif %}</span></h4>
+  <p>{{ song.content | markdownify }}</p>
+</div>
+{% endfor %}
+

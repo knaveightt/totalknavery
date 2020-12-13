@@ -1,0 +1,39 @@
+---
+layout: page
+title: TotalKnavery Music
+description: Audio for all sorts of occasions! 
+---
+<!-- Include/initialize audiojs file for music player -->
+<script src="{{ 'assets/js/audio.min.js' | relative_url }}"></script>
+<script>
+  audiojs.events.ready(function() {
+      var as = audiojs.createAll();
+  });
+</script>
+
+
+<!-- Intro -->
+<div class="row">
+  <section class="6u 12u$(medium)">
+    <h2>Listen to the track!</h2>
+    <audio src="{{ page.filepath | relative_url }}" preload="auto"></audio>
+    <p><div class ="image leftbox"><img src="{{ page.artwork | relative_url }}" alt="Album Image" /></div>
+      {{ content }}</p>
+  </section>
+
+  <section class="3u 6u(medium) 12u$(small)">
+    <h3>Track Info:</h3>
+    <ul>
+      <li>Artist: {{ page.artist }}</li>
+      <li>Album: {{ page.album }}</li>
+      <li>Length: {{ page.length }}</li>
+      <li>Category: {{ page.category }}</li>
+    </ul>
+    <a href="{{ '/music' | relative_url }}" class="button">Go Back</a>
+  </section>
+
+  <section class="3u$ 6u$(medium) 12u$(small)">
+    <h3>Notice</h3>
+    <p>Unless otherwise stated, all music is provided for preview on this site only and is explicitly owned by TotalKnavery (John Osinski) or the respective copyright/license owners. All rights reserved.</p>
+  </section>
+</div>
