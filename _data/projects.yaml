@@ -1,2 +1,22 @@
 - title: Knave's Elemental Pearls
   type: Minecraft Datapack
+  image: assets/images/pic01.jpg
+  indicator: active
+  version: 0.8.2 (Pre-Release)
+  links:
+    - type: github
+      ref: https://github.com/knaveightt/knv-elemental
+  description: |
+    Play Minecraft with an expanded set of pearls at your disposal, adding 14 new pearl types beyond the basic Ender Pearl!
+
+- title: MC Touchcore 
+  type: Minecraft Datapack
+  image: assets/images/pic02.jpg
+  indicator: active
+  version: 1.1.0-beta1 (Beta)
+  links:
+    - type: github
+      ref: https://github.com/knaveightt/mctoughcore
+  description: |
+    Play a gamemode halfway between Survival and Hardcore, where you only have 5 lives and things get harder with each death.
+

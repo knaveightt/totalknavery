@@ -4,6 +4,11 @@
 #     - entry: Sample Change 1
 #     - entry: Sample Change 2
 #     - entry: Sample Change 3
+- date: December 13th, 2020
+  changes:
+    - entry: Created Projects Page!
+    - entry: See what programming projects are up!
+
 - date: December 5th, 2020
   changes:
     - entry: Created Music Page!
