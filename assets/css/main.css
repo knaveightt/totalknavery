@@ -1769,6 +1769,7 @@
         max-width: 75em;
         margin-left: 320px;
         padding-left: 40px;
+        min-height: 600px;
     }
 
     .highlight {
