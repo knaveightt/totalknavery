@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<!--
+	Projection by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>{{ page.title }}</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="{{ 'assets/css/main.css' | relative_url }}" />
+	</head>
+	<body class="subpage">
+
+
+        <!-- Navigation Include -->
+        {% include navigation.html %}
+
+		<!-- Three -->
+			<section id="main" class="wrapper blog">
+              
+		    <!-- leftbar -->
+            <div id="leftbar" class="inner">
+              <p>This Test.</p>
+              <p>This Test 2. </p>
+            </div>    
+                <div class="inner-with-leftbar">
+					<header class="align-center">
+						<h2>{{ page.title }}</h2>
+						<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+					</header>
+
+                    {{ content }}
+               <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+
+                   
+			    </div>
+			</section>
+
+		<!-- Footer -->
+        {% include footer.html %}    
+
+		<!-- Scripts -->
+	        <script src="{{ 'assets/js/jquery.min.js' | relative_url }}"></script>
+			<script src="{{ 'assets/js/skel.min.js' | relative_url }}"></script>
+			<script src="{{ 'assets/js/util.js' | relative_url }}"></script>
+			<script src="{{ 'assets/js/main.js' | relative_url }}"></script>
+
+	</body>
+</html>
