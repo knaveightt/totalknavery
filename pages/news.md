@@ -2,6 +2,7 @@
 layout: page
 title: News
 description: Checkout the latest changes!
+permalink: /news/
 ---
 
 {% for item in site.data.news %}
