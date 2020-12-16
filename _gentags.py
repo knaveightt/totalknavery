@@ -4,6 +4,7 @@
 # This script auto-generates tag pages using the tagpage layout in tags/ directory,
 # based on the tags used in the blog posts.
 # Works in conjunction with the tagcloud include on blog pages
+# NOTE!! Blog posts with single tags should have the tag enclose in [,] brackets to treat as single item list
 
 # requires pyyaml, you can install using pip
 import os, yaml
