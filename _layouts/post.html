@@ -23,8 +23,12 @@
               
 		    <!-- leftbar -->
             <div id="leftbar" class="inner">
-              <p>This Test.</p>
-              <p>This Test 2. </p>
+              <h4>Tag Cloud:</h4>
+              <p class="tag-cloud" style="text-align: justify;">
+                {% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+                {% assign tags = site_tags | split:',' | sort %}
+                {% include tagcloud.html %}
+              </p>
             </div>    
                 <div class="inner-with-leftbar">
 					<header class="align-center">

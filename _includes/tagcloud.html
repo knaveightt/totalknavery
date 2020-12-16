@@ -1,0 +1,42 @@
+{% comment %}
+===========================
+Note: this include expects there to be a variable 'tags' defined which is the population of tags
+to consider for the tag cloud
+
+Based on the article at https://jovandeginste.github.io/2016/05/04/add-a-tag-cloud-to-my-jekyll-site.html
+Let's get an array of all the tags that exist on the site
+FIRST: Get a comma-seperated string of all the tags on the site like: tag1,tag2,tag3
+SECOND: Reassign the variable to be an array (based on the comma delimiter) like: [tag1, tag2, tag3]
+===========================
+{% endcomment %}
+
+{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign site_tags = site_tags | split: ',' %}
+
+
+{% comment %}
+===========================
+NEXT: Count how many tags exist across all posts
+site.tags[tag].size is key, gives you the number based on a specifc tag within all site tags
+===========================
+{% endcomment %}
+
+{% assign tag_count = 0 %}
+{% for tag in site_tags %}
+{% assign tag_count = tag_count | plus: site.tags[tag].size %}
+{% endfor %}
+
+{% comment %}
+===========================
+LAST: Now we have a tag_count, and should have a list of 'tags' to work with prior
+Let's generate the tag cloud
+===========================
+{% endcomment %}
+
+{% for tag in tags %}
+{% assign rel_tag_size = site.tags[tag].size | times: 0.2 | divided_by: tag_count | plus: 1 %}
+{% capture tag_url %}tags/{{ tag | slugize }}{% endcapture %}
+<span style="white-space: nowrap; font-size: {{ rel_tag_size }}em; padding: 0.6em;">
+  <a href="{{ tag_url | relative_url }}" class="tag">{{ tag | slugize }}<span>({{ site.tags[tag].size }})</span></a>
+</span>
+{% endfor %}
