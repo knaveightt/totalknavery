@@ -1813,6 +1813,35 @@
             background-color: #361000;
             overflow-x: hidden;
             padding-top: 44px;
+            font-family: Verdana, sans-serif;
+        }
+
+        #leftbar h4 {
+            font-size: 1em;
+            font-weight: bold;
+            color: #ccc;
+        }
+
+        #tag_list{
+           margin-left: 1em;
+           margin-right: 1em;
+        }
+
+        #tag_list .actions {
+            margin-bottom: 1em;
+        }
+
+        #tag_list blockquote {
+            border-left: 5px solid #777;
+        }
+        
+        #tag_list a {
+            color: #777; 
+        }
+        
+        #cat_list {
+            margin-left: 1em;
+            margin-right: 1em;
         }
 
         @media screen and (max-width: 480px) {

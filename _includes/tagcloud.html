@@ -34,7 +34,7 @@ Let's generate the tag cloud
 {% endcomment %}
 
 {% for tag in tags %}
-{% assign rel_tag_size = site.tags[tag].size | times: 0.2 | divided_by: tag_count | plus: 1 %}
+{% assign rel_tag_size = site.tags[tag].size | times: 5 | divided_by: tag_count | plus: 0.6 %}
 {% capture tag_url %}tags/{{ tag | slugize }}{% endcapture %}
 <span style="white-space: nowrap; font-size: {{ rel_tag_size }}em; padding: 0.6em;">
   <a href="{{ tag_url | relative_url }}" class="tag">{{ tag | slugize }}<span>({{ site.tags[tag].size }})</span></a>
