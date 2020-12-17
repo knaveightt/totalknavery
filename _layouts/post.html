@@ -39,19 +39,39 @@
               
               <div id="cat_list">
                 <ul class="actions fit">
-                  <li><a href="#" class="button alt fit">Categories</a></li>
+                  <li><a href="#" class="button alt fit">Recent Categories</a></li>
                 </ul>
-              {% for category in site.categories %}
-              {% assign cat = category[0] %}
-              <h6><a href="#">{{ cat }}</a></h6>
-              <ul>
-              {% for post in site.categories[cat] %}
-              <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <small>{{ post.date | date: "%Y-%m-%d" }}</small></li>
+              {% assign recent_categories = '' | split: '' %}
+              {% assign num_recent_cat = 0 %}
+              {% for post in site.posts %}
+                {% if recent_categories contains post.category %}
+                  {% continue %}
+                {% else %}
+                  {% capture recent_categories_string %}{{ recent_categories | join: ',' }},{{ post.category }}{% endcapture %}
+                  {% assign recent_categories = recent_categories_string | split: ',' %}
+                  {% assign num_recent_cat = num_recent_cat | plus: 1 %}
+                {% endif %}
+                {% if num_recent_cat == 3 %}
+                  {% break %}
+                {% endif %}
               {% endfor %}
+              
+              {% for cat in recent_categories %}
+              <h5><a href="#">{{ cat }}</a></h5>
+              <ul>
+                {% assign num_posts = 0 %}
+                {% for post in site.categories[cat] %}
+                {% if num_posts == 3 %}
+                {% break %}
+                {% else %}
+                <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <small>{{ post.date | date: "%Y-%m-%d" }}</small></li>
+                {% assign num_posts = num_posts | plus: 1 %}
+                {% endif %}
+                {% endfor %}
               </ul>
               {% endfor %}
               </div>
-              
+
             </div>    
             <div class="inner-with-leftbar">
 				<header class="align-center">
