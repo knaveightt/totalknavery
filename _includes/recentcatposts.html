@@ -8,7 +8,7 @@ This include prints a category and gives the last 5 posts for each category in c
 {% endcomment %}
 
 {% for cat in cats %}
-<h5><a href="#">{{ cat }}</a></h5>
+<h5><a href="{{ 'categories/' | relative_url }}#{{ cat }}">{{ cat }}</a></h5>
 <div class="recent_posts"><ul>
   {% assign num_posts = 0 %}
   {% for post in site.categories[cat] %}

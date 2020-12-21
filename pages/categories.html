@@ -1,0 +1,16 @@
+---
+layout: post
+title: Posts by Category
+description: All blog categories
+permalink: /categories/
+---
+{% for category in site.categories %}
+<h2 id="{{ category.first }}">{{ category.first }}</h2>
+<ul>
+  {% for post in category.last %}
+    <li>
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2> <small> {{ post.date | date: "%B %-d, %Y" }}</small>
+    </li>
+  {% endfor %}
+</ul>
+{% endfor %}
