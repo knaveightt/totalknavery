@@ -1,0 +1,27 @@
+{% comment %}
+===========================
+Note: this include expects there to be a variable 'cats' defined which is the population of categories
+to be worked with
+
+This include finds the last three categories that have had a new post recently created
+
+Let's get all the posts from the site and interate through them
+For each post, check if that post's category is in the 'cat' variable
+If not, add it to the variable, and keep going through posts until we have 3 categories in 'cats'
+===========================
+{% endcomment %}
+
+{% assign num_recent_cat = 0 %}
+{% for post in site.posts %}
+  {% if cats contains post.category %}
+    {% continue %}
+  {% else %}
+    {% capture recent_categories_string %}{{ cats | join: ',' }},{{ post.category }}{% endcapture %}
+    {% assign cats = recent_categories_string | split: ',' %}
+    {% assign num_recent_cat = num_recent_cat | plus: 1 %}
+  {% endif %}
+  {% if num_recent_cat == 3 %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+ 
