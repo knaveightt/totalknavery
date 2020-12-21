@@ -1828,20 +1828,41 @@
         }
 
         #tag_list .actions {
-            margin-bottom: 1em;
+            margin-bottom: 0.7em;
         }
 
         #tag_list blockquote {
-            border-left: 5px solid #777;
+            border-left: 5px solid #34495e;
         }
         
         #tag_list a {
-            color: #777; 
+            color: #34495e; 
         }
         
         #cat_list {
             margin-left: 1em;
             margin-right: 1em;
+        }
+
+        #cat_list h5 {
+            font-family: Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 0em;
+            color: #34495e;
+        }
+
+        #cat_list .recent_posts ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 0.8em;
+        }
+
+        #cat_list .recent_posts li a {
+            color: #777;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 0.88em;
         }
 
         @media screen and (max-width: 480px) {

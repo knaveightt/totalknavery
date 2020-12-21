@@ -9,15 +9,15 @@ This include prints a category and gives the last 5 posts for each category in c
 
 {% for cat in cats %}
 <h5><a href="#">{{ cat }}</a></h5>
-<ul>
+<div class="recent_posts"><ul>
   {% assign num_posts = 0 %}
   {% for post in site.categories[cat] %}
   {% if num_posts == 5 %}
   {% break %}
   {% else %}
-  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a> <small>{{ post.date | date: "%Y-%m-%d" }}</small></li>
+  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
   {% assign num_posts = num_posts | plus: 1 %}
   {% endif %}
   {% endfor %}
-</ul>
+</ul></div>
 {% endfor %}
