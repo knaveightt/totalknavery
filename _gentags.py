@@ -49,4 +49,4 @@ for filename in os.listdir("_posts"):
 for tag in tags:
     filename = "tags/" + tag + ".html"
     with open(filename, "w") as file:
-        file.write("---\nlayout: tagpage\ntitle: "+tag+" Posts\ndescription: Blog posts by tag "+tag+"\ntag: "+tag+"\npermalink: /tags/"+tag+"\n---\n")
+        file.write("---\nlayout: tagpage\ntitle: "+tag+" Posts\ndescription: Blog posts by tag "+tag+"\ntag: "+tag+"\npermalink: /blog/tags/"+tag+"\n---\n")
