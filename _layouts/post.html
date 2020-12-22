@@ -50,7 +50,9 @@
             <div class="inner-with-leftbar">
 				<header class="align-center">
 					<h2>{{ page.title }}</h2>
+                    {% if page.author %}
 					<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+                    {% endif %}
 				</header>
 
                     {{ content }}

@@ -1801,6 +1801,11 @@
 
 		}
 
+
+        .recent_blog_posts h3 {
+            text-align: center;
+        }
+
 /* leftbar */
         #leftbar {
             height: 100%;

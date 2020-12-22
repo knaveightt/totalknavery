@@ -4,11 +4,21 @@ title: TotalKnavery Blog
 description: Checkout my blog posts!
 permalink: /blog/
 ---
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
+<div class="recent_blog_posts">
+<h3>Here are the most recent blog posts:</h3>
+
+{% assign entries = 0 %}
+{% for post in site.posts %}
+{% if entries == 5 %}{% break %}{% endif %}
+<div class="box">
+  <div class ="image leftbox"><img src="{{ 'assets/images/albums/default.png' | relative_url }}" alt="Album Image" /></div>
+  <div id="musiclinks">
+    <a href="{{ post.url | relative_url }}" class="button icon fa-play-circle">Goto Post</a>
+  </div>
+  <h4><span class="highlight">{{ post.title }}</span><br/>
+  <span class="subtext">{{ post.date | date: "%-d %B %Y" }}</span></h4>
+  <p>{{ post.excerpt }}</p>
+</div>
+{% assign entries = entries | plus: 1 %}
+{% endfor %}
+</div>
