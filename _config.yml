@@ -1,3 +1,5 @@
+exclude: [Makefile]
+
 collections:
     songs:
       output: true
