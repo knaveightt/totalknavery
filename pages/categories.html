@@ -4,13 +4,17 @@ title: Posts by Category
 description: All blog categories
 permalink: /blog/categories/
 ---
+<div id="allcats">
 {% for category in site.categories %}
 <h2 id="{{ category.first }}">{{ category.first }}</h2>
+<hr />
 <ul>
   {% for post in category.last %}
     <li>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2> <small> {{ post.date | date: "%B %-d, %Y" }}</small>
+      <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a><small> {{ post.date | date: "%Y-%m-%d" }}</small></h4>
     </li>
   {% endfor %}
 </ul>
+<br/>
 {% endfor %}
+</div>
