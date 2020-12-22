@@ -1,15 +1,15 @@
 ---
 layout: post
 ---
-
+<div id="allcats">
 <ul>
 
 {% for post in site.posts %}
 {% if post.tags contains page.tag %}
 
 <li>
-  <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-  {{ post.excerpt }}
+  <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a><small> {{ post.date | date: "%B %-d, %Y" }}</small></h2>
+  <blockquote>{{ post.excerpt }}</blockquote>
 </li>
 
 
@@ -17,3 +17,4 @@ layout: post
 {% endfor %}
 
 </ul>
+</div>

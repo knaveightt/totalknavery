@@ -9,7 +9,8 @@ permalink: /blog/tags/
 
 <div id="allcats">
 {% for tag in tags %}
-<h2>{{ tag }}</h2>
+{% capture tag_url %}blog/tags/{{ tag }}{% endcapture %}
+<h2><a href="{{ tag_url | relative_url }}">{{ tag }}</a></h2>
 <hr/>
 <ul>
   {% for post in site.posts %}
