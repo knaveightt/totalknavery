@@ -1776,6 +1776,11 @@
         color:#fff;
     }
 
+    .highlight-date{
+        color: #777;
+        font-size: 0.73em;
+    }
+    
     .subtext {
         color: #6a3030;
         font-size: 0.6em;

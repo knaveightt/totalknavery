@@ -15,8 +15,8 @@ permalink: /blog/
   <div id="musiclinks">
     <a href="{{ post.url | relative_url }}" class="button icon fa-play-circle">Goto Post</a>
   </div>
-  <h4><span class="highlight">{{ post.title }}</span><br/>
-  <span class="subtext">{{ post.date | date: "%-d %B %Y" }}</span></h4>
+  <h4><span class="highlight">{{ post.title }}</span></span><br/>
+  <span class="subtext">{{ post.date | date: "%-d %B %Y" }} | Category: {{ post.category }}</span></h4>
   <p>{{ post.excerpt }}</p>
 </div>
 {% assign entries = entries | plus: 1 %}
