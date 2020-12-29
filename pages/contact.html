@@ -1,0 +1,25 @@
+---
+layout: page
+title: Contact Me!
+description: Use the contact form below.
+permalink: /contact/
+---
+
+
+<form action="https://getsimpleform.com/messages?form_api_token=cb4560483503bad856d7047c8e1f6cb0" method="post">
+  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+  <input type='hidden' name='redirect_to' value='{{ "thankyou/" | absolute_url }}' />
+  <!-- all your input fields here.... -->
+  <div class="row uniform">
+    <div class="6u 12u$(xsmall)"><input type='text' name='name' id="demo-name" value="" placeholder="Name" /></div>
+    <div class="6u 12u$(xsmall)"><input type='text' name='email' id='demo-email' value="" placeholder="Email"/></div>
+    <div class="12u$"><input type='text' name='subject' placeholder="Subject" /></div>
+    <div class="12u$"><textarea name='message' id='demo-message' placeholder="Enter your message here!" rows="6"></textarea></div>
+    <div class="12u$">
+	  <ul class="actions">
+		<li><input type="submit" value="Send Message" /></li>
+		<li><input type="reset" value="Reset" class="alt" /></li>
+	  </ul>
+	</div>
+  </div>
+</form>
