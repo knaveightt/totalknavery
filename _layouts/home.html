@@ -15,18 +15,7 @@
 	<body>
 
 		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="{{ 'index.html' | relative_url }}" class="logo">Welcome to <strong>TotalKnavery!</strong></a>
-					<nav id="nav">
-						<a href="{{ '/projects' | relative_url }}">Programming</a>
-						<a href="{{ '/songs' | relative_url }}">Music</a>
-						<a href="{{ '/inprogress' | relative_url }}">Blog</a>
-                        <a href="{{ '/contact' | relative_url }}">Contact</a>
-					</nav>
-					<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
-				</div>
-			</header>
+        {% include navigation.html %}
 
 		<!-- Banner -->
 			<section id="banner">
@@ -120,10 +109,7 @@
 			</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            {% include scripts.html %}
 
 	</body>
 </html>
