@@ -51,7 +51,10 @@
 				<header class="align-center">
 					<h2>{{ page.title }}</h2>
                     {% if page.author %}
-					<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+					<p>
+                      Posted on {{ page.date | date_to_string }}<br />
+                      Category: <span class="blog-cat-hl"><a href="{{ 'blog/categories/' | relative_url }}#{{ page.category }}">{{ page.category }}</a></span> | Tags: <span class="blog-tags-hl">{% for pagetag in page.tags %}{% capture bturl %}blog/tags/{{ pagetag | slugize }}{% endcapture %}<a href="{{ bturl | relative_url }}">{{ pagetag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}</span>
+                    </p>
                     {% endif %}
 				</header>
 
