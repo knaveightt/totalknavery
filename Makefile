@@ -12,5 +12,8 @@ clean :
 	rm tags/*.html
 
 #Force rebuilding of tags
-rebuild :
+rebuild : update
 	$(cc) $(OBJS)
+
+update :
+	cp ~/Documents/global/projects.yaml _data/projects.yaml

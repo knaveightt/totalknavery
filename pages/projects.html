@@ -6,6 +6,7 @@ permalink: /projects/
 ---
 
 {% for project in site.data.projects %}
+{% if project.visible == true %}
   <div class="box">
     <div class ="image leftbox"><img src="{{ project.image | relative_url }}" alt="Project Image" /></div> <!-- image -->
     <div id="musiclinks"> <!-- Leveraging musiclinks for now -->
@@ -17,4 +18,5 @@ permalink: /projects/
     <span class="subtext">{{ project.type }} | Version: {{ project.version }} | Status: {{ project.indicator }} </span></h4>
     <p>{{ project.description }}</p>
   </div> <!-- box -->
+{% endif %}
 {% endfor %}

@@ -1,5 +1,6 @@
 - title: Knave's Elemental Pearls
   type: Minecraft Datapack
+  visible: true
   image: assets/images/pic01.jpg
   indicator: active
   version: 0.8.2 (Pre-Release)
@@ -11,6 +12,7 @@
 
 - title: MC Touchcore 
   type: Minecraft Datapack
+  visible: true
   image: assets/images/pic02.jpg
   indicator: active
   version: 1.1.0-beta1 (Beta)
@@ -20,3 +22,14 @@
   description: |
     Play a gamemode halfway between Survival and Hardcore, where you only have 5 lives and things get harder with each death.
 
+- title: TotalKnavery
+  type: Website
+  visible: false
+  image: assets/images/pic01.jpg
+  indicator: active
+  version: 1.0 (Pre Release)
+  links:
+    - type: github
+      ref: https://github.com/knaveightt/knaveightt.github.io
+  description: |
+    Repository for the TotalKnavery website 
