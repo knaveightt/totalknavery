@@ -21,8 +21,15 @@
 			<section id="banner">
 				<div class="inner">
 					<header>
-						<h1>TotalKnavery</h1>
-						<p class="subtitle">"You are not worth another word, else I'd call you knave"</p>
+					  <h1>TotalKnavery</h1>
+
+                        <!-- Load a random quote from the quotes.txt file -->
+						<p class="subtitle" id="randomQuote"></p>
+                        <script src="{{ 'assets/js/randomQuote.js' | relative_url }}"></script>
+                        <script type="text/javascript">
+                            document.getElementById("randomQuote").innerHTML=getRandomQuote("{{ 'assets/file/quotes.txt' | relative_url }}");
+                        </script>
+
 					</header>
 
 					<div class="flex ">
@@ -110,6 +117,5 @@
 
 		<!-- Scripts -->
             {% include scripts.html %}
-
 	</body>
 </html>
