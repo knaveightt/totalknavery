@@ -4,6 +4,11 @@
 #     - entry: Sample Change 1
 #     - entry: Sample Change 2
 #     - entry: Sample Change 3
+- date: April 25th, 2021
+  changes:
+    - entry: Blog section is up and running!
+    - entry: Added first post to the blog!
+
 - date: March 21st, 2021
   changes:
     - entry: Updated Home Page Quotes!
