@@ -4,6 +4,10 @@
 #     - entry: Sample Change 1
 #     - entry: Sample Change 2
 #     - entry: Sample Change 3
+- date: April 30th, 2021
+  changes:
+    - entry: Added Twitter feed to page footers!
+
 - date: April 25th, 2021
   changes:
     - entry: Blog section is up and running!
